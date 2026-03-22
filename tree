@@ -1,0 +1,46 @@
+dashboard_app/
+├── app.py
+│
+├── core/
+│   ├── __init__.py
+│   ├── io_utils.py
+│   ├── paths.py
+│   ├── state.py
+│   ├── timeline.py
+│   └── timeline_icons.py
+│
+├── sections/
+│   ├── __init__.py
+│   ├── biomaterial_block.py
+│   ├── footer_mode.py
+│   ├── meta_block.py
+│   ├── patient_block.py
+│   ├── sample_selector.py
+│   ├── title_block.py
+│   └── treatment_block.py
+│
+├── styles_css/
+│   ├── 00_base.css
+│   ├── 01_title_block.css
+│   ├── 02_meta_block.css
+│   ├── 03_patient_block.css
+│   ├── 04_treatment_block.css
+│   ├── 05_biomaterial_block.css
+│   ├── 06_footer_mode.css
+│   └── 07_sample_selector.css
+│
+├── assets/
+│   ├── logo.png
+│   ├── patient.svg
+│   ├── treatment.svg
+│   ├── biomaterial.svg
+│   └── edit.svg
+│
+└── data/
+    └── {SAMPLE}/
+        ├── Timeline.json
+        ├── ... другие исходные файлы sample ...
+        └── edit/
+            ├── meta.json
+            ├── patient.json
+            └── biomaterial.json
