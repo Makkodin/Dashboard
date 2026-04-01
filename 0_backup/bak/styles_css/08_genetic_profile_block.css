@@ -1,0 +1,233 @@
+.genetic-subblock-title-row {
+    display: flex;
+    align-items: center;
+    min-height: 32px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+.genetic-subblock-title-row--compact {
+    min-height: 28px;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.genetic-subblock-title-text {
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+}
+
+.genetic-subblock-subtitle {
+    font-size: 12px;
+    line-height: 1.35;
+    color: #8A8F98;
+    margin-bottom: 10px;
+}
+
+.genetic-subblock-subtitle--inside-card {
+    margin-bottom: 12px;
+}
+
+.genetic-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+
+.genetic-card-top-row {
+    min-height: 240px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.genetic-card-rare-events {
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.genetic-card-head {
+    flex: 0 0 auto;
+}
+
+.genetic-card-body {
+    flex: 1 1 auto;
+}
+
+.genetic-card-body--centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.genetic-kv-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.genetic-kv-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.genetic-mini-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0;
+}
+
+.genetic-tmb-inline-value {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.genetic-status-inline-text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #111111;
+}
+
+.genetic-threshold-hint-wrap {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.genetic-threshold-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    line-height: 1.4;
+    color: #7B818A;
+    cursor: help;
+    user-select: none;
+}
+
+.genetic-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.genetic-table-wrap--compact {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.genetic-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    color: #111111;
+    background: transparent;
+}
+
+.genetic-table thead th {
+    text-align: left;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #7E8590;
+    padding: 0 10px 8px 0;
+    border-bottom: 1px solid #D7DCE2;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.genetic-table tbody td {
+    padding: 10px 10px 10px 0;
+    border-bottom: 1px solid #E7EBF0;
+    vertical-align: middle;
+}
+
+.genetic-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.genetic-table--compact {
+    font-size: 12px;
+}
+
+.genetic-table--compact thead th,
+.genetic-table--compact tbody td {
+    padding-right: 10px;
+    vertical-align: middle;
+}
+
+.genetic-table--hla thead th,
+.genetic-table--hla tbody td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.genetic-table-row-title {
+    font-weight: 700;
+    color: #374151;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.genetic-hla-allele {
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+.genetic-empty-text {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.genetic-rare-text {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #111111;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.genetic-tooltip {
+    position: relative;
+    display: inline-block;
+    font-size: 11.5px;
+    color: #7B818A;
+    cursor: help;
+}
+
+.genetic-tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+
+    position: absolute;
+    bottom: 125%;
+    left: 0;
+
+    background-color: #111827;
+    color: #FFFFFF;
+
+    padding: 8px 10px;
+    border-radius: 6px;
+
+    font-size: 12px;
+    line-height: 1.4;
+    white-space: normal;
+    width: 260px;
+
+    z-index: 9999;
+}
+
+.genetic-tooltip:hover .genetic-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}

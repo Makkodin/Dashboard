@@ -1,0 +1,182 @@
+.immune-sign-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    align-items: stretch;
+}
+
+.immune-sign-grid-item,
+.immune-sign-grid-spacer,
+.immune-sign-legend {
+    min-width: 0;
+}
+
+.immune-sign-grid-item {
+    display: flex;
+    align-self: stretch;
+}
+
+.immune-sign-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 14px 16px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.immune-sign-card-title {
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 4px 0;
+}
+
+.immune-sign-card-desc {
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: #6B7280;
+    margin-bottom: 12px;
+}
+
+.immune-sign-summary {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    line-height: 1.35;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.immune-sign-summary-icon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.immune-sign-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1 1 auto;
+}
+
+.immune-sign-row {
+    display: grid;
+    grid-template-columns: minmax(155px, 1.35fr) 4fr 44px;
+    gap: 10px;
+    align-items: center;
+}
+
+.immune-sign-row-label {
+    font-size: 12px;
+    line-height: 1.25;
+    color: #374151;
+}
+
+.immune-sign-row-bar {
+    width: 100%;
+    height: 14px;
+    border-radius: 999px;
+    background: #E5E7EB;
+    border: 1px solid #D1D5DB;
+    overflow: hidden;
+}
+
+.immune-sign-row-bar-fill {
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+}
+
+.immune-sign-row-value {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    line-height: 1;
+    color: #4B5563;
+    text-align: right;
+}
+
+.immune-sign-grid-spacer {
+    visibility: hidden;
+}
+
+.immune-sign-legend {
+    grid-column: 1 / -1;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 10px 16px 14px 16px;
+}
+
+.immune-sign-legend-title {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #4B5563;
+    margin-bottom: 8px;
+}
+
+.immune-sign-legend-scale {
+    position: relative;
+    height: 14px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #1D4ED8 0%, #60A5FA 18%, #E5E7EB 50%, #FCA5A5 82%, #EF4444 100%);
+    border: 1px solid #D1D5DB;
+}
+
+.immune-sign-legend-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 700;
+    color: #111827;
+}
+
+.immune-sign-legend-label--left {
+    left: 8px;
+    color: #FFFFFF;
+}
+
+.immune-sign-legend-label--center {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #4B5563;
+}
+
+.immune-sign-legend-label--right {
+    right: 8px;
+    color: #FFFFFF;
+}
+
+@media (max-width: 1100px) {
+    .immune-sign-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .immune-sign-legend {
+        grid-column: auto;
+    }
+
+    .immune-sign-grid-spacer {
+        display: none;
+    }
+
+    .immune-sign-grid-item {
+        display: block;
+    }
+
+    .immune-sign-card {
+        height: auto;
+    }
+}

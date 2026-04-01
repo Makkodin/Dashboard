@@ -1,0 +1,47 @@
+.title-block-shell {
+    min-height: 132px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF !important;
+}
+
+.title-block-left {
+    justify-content: flex-start;
+}
+
+.title-block-right {
+    justify-content: flex-start;
+}
+
+.title-block-main-text {
+    font-size: 31px;
+    line-height: 1.22;
+    font-weight: 800;
+    color: var(--blue-title);
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-align: left;
+}
+
+.title-block-logo-img {
+    display: block;
+    width: clamp(220px, 100%, 420px);
+    min-width: 220px;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+}
+
+.title-block-logo-placeholder {
+    width: clamp(220px, 100%, 420px);
+    min-width: 220px;
+    min-height: 120px;
+    border: 1px dashed #C7CCD4;
+    border-radius: 14px;
+    background: #FAFAFA;
+    color: #7B8794;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

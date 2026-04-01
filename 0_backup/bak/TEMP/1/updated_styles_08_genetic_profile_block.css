@@ -1,0 +1,297 @@
+.genetic-top-grid {
+    display: grid;
+    grid-template-columns: 3fr 3fr 4fr;
+    gap: 12px;
+    align-items: stretch;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.genetic-top-grid-item {
+    min-width: 0;
+}
+
+.genetic-subblock-title-row {
+    display: flex;
+    align-items: center;
+    min-height: 28px;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.genetic-subblock-title-row--outside {
+    margin-top: 2px;
+    margin-bottom: 0;
+}
+
+.genetic-subblock-title-text {
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #111111;
+    margin: 0;
+}
+
+.genetic-subblock-subtitle {
+    font-size: 12px;
+    line-height: 1.35;
+    color: #8A8F98;
+    margin-bottom: 0;
+}
+
+.genetic-subblock-subtitle--inside-card {
+    margin-bottom: 8px;
+}
+
+.genetic-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.genetic-card-top-row {
+    min-height: 262px;
+    display: flex;
+    flex-direction: column;
+}
+
+.genetic-card-rare-events {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.genetic-card-head {
+    flex: 0 0 auto;
+}
+
+.genetic-card-body {
+    flex: 1 1 auto;
+}
+
+.genetic-card-body--centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.genetic-kv-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.genetic-kv-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.genetic-mini-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0;
+}
+
+.genetic-tmb-inline-value {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.genetic-status-inline-text {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #111111;
+}
+
+.genetic-tmb-scale-wrap {
+    margin-bottom: 10px;
+}
+
+.genetic-tmb-scale {
+    position: relative;
+    display: grid;
+    grid-template-columns: 10fr 2fr 68fr;
+    width: 100%;
+    height: 10px;
+    border-radius: 999px;
+    overflow: visible;
+    background: #E5E7EB;
+}
+
+.genetic-tmb-zone {
+    height: 10px;
+}
+
+.genetic-tmb-zone--low {
+    background: #86EFAC;
+    border-radius: 999px 0 0 999px;
+}
+
+.genetic-tmb-zone--mid {
+    background: #FCD34D;
+}
+
+.genetic-tmb-zone--high {
+    background: #FCA5A5;
+    border-radius: 0 999px 999px 0;
+}
+
+.genetic-tmb-marker {
+    position: absolute;
+    top: -7px;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 24px;
+    background: #111827;
+    border-radius: 999px;
+}
+
+.genetic-tmb-marker-value {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    color: #111827;
+}
+
+.genetic-tmb-ticks {
+    display: grid;
+    grid-template-columns: 10fr 2fr 68fr;
+    gap: 0;
+    margin-top: 6px;
+    font-size: 10.5px;
+    line-height: 1.2;
+    color: #7B818A;
+}
+
+.genetic-tmb-ticks span:nth-child(1) {
+    justify-self: start;
+}
+
+.genetic-tmb-ticks span:nth-child(2) {
+    justify-self: start;
+}
+
+.genetic-tmb-ticks span:nth-child(3) {
+    justify-self: start;
+    transform: translateX(-3px);
+}
+
+.genetic-tmb-ticks span:nth-child(4) {
+    justify-self: end;
+}
+
+.genetic-threshold-hint-wrap {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.genetic-tooltip {
+    position: relative;
+    display: inline-block;
+    font-size: 11.5px;
+    line-height: 1.35;
+    color: #7B818A;
+    cursor: help;
+}
+
+.genetic-tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.18s ease;
+    position: absolute;
+    left: 0;
+    bottom: calc(100% + 8px);
+    width: 260px;
+    background: #111827;
+    color: #FFFFFF;
+    padding: 8px 10px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(17, 24, 39, 0.18);
+    font-size: 12px;
+    line-height: 1.4;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.genetic-tooltip:hover .genetic-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.genetic-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.genetic-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    color: #111111;
+    background: transparent;
+}
+
+.genetic-table thead th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 700;
+    color: #7E8590;
+    padding: 0 10px 7px 0;
+    border-bottom: 1px solid #D7DCE2;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.genetic-table tbody td {
+    padding: 8px 10px 8px 0;
+    border-bottom: 1px solid #E7EBF0;
+    vertical-align: middle;
+}
+
+.genetic-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.genetic-table-row-title {
+    font-weight: 700;
+    color: #374151;
+    white-space: nowrap;
+}
+
+.genetic-hla-allele {
+    font-weight: 700;
+}
+
+.genetic-empty-text {
+    font-size: 13px;
+    color: #6B7280;
+}
+
+.genetic-rare-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #111111;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+@media (max-width: 1100px) {
+    .genetic-top-grid {
+        grid-template-columns: 1fr;
+    }
+}
