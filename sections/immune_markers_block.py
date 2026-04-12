@@ -60,22 +60,20 @@ def _card_html(card: dict) -> str:
     ])
 
 
-def _panel_columns_class(card_count: int) -> str:
+def _grid_class_for_count(card_count: int) -> str:
     if card_count <= 3:
         return 'immune-marker-panel-grid immune-marker-panel-grid--3'
-    if card_count == 4:
-        return 'immune-marker-panel-grid immune-marker-panel-grid--4'
-    return 'immune-marker-panel-grid immune-marker-panel-grid--5'
+    return 'immune-marker-panel-grid immune-marker-panel-grid--4'
 
 
 def _grid_row_html(cards: list[dict], extra_class: str = "") -> str:
-    classes = _panel_columns_class(len(cards))
+    classes = _grid_class_for_count(len(cards))
     if extra_class:
         classes += f" {extra_class}"
     return f'<div class="{classes}">{"".join(_card_html(card) for card in cards)}</div>'
 
 
-def _panel_html(panel: dict, panel_index: int) -> str:
+def _panel_html(panel: dict) -> str:
     cards = list(panel.get('cards', []))
     panel_tooltip = " ".join(
         part
@@ -86,11 +84,8 @@ def _panel_html(panel: dict, panel_index: int) -> str:
         if part
     )
 
-    top_cards = cards[:4]
-    bottom_cards = cards[4:]
-
     html_parts = [
-        f'<div class="immune-marker-panel immune-marker-panel--{panel_index + 1}">',
+        '<div class="immune-marker-panel">',
         f'<div class="immune-marker-panel-title">{esc(panel.get("title", ""))}</div>',
         f'<div class="immune-marker-panel-subtitle">{esc(panel.get("subtitle", ""))}</div>',
         '<div class="immune-marker-panel-info-row">',
@@ -98,18 +93,17 @@ def _panel_html(panel: dict, panel_index: int) -> str:
         '</div>',
     ]
 
-    if top_cards:
-        html_parts.append(_grid_row_html(top_cards, "immune-marker-panel-grid-row immune-marker-panel-grid-row--top"))
-
-    html_parts.extend([
-        '<div class="immune-marker-panel-footer">',
-    ])
-
-    if bottom_cards:
-        html_parts.append(_grid_row_html(bottom_cards, "immune-marker-panel-grid-row immune-marker-panel-grid-row--bottom"))
+    if len(cards) == 5:
+        html_parts.append(_grid_row_html(cards[:3], "immune-marker-panel-grid-row immune-marker-panel-grid-row--top"))
+        html_parts.append(_grid_row_html(cards[3:], "immune-marker-panel-grid-row immune-marker-panel-grid-row--bottom"))
+    else:
+        html_parts.append(
+            f'<div class="{_grid_class_for_count(len(cards))}">'
+            f'{"".join(_card_html(card) for card in cards)}'
+            '</div>'
+        )
 
     html_parts.append(f'<div class="immune-marker-panel-note">{esc(panel.get("note", ""))}</div>')
-    html_parts.append('</div>')
     html_parts.append('</div>')
     return ''.join(html_parts)
 
@@ -124,13 +118,11 @@ def render_immune_markers_block():
     panels = data.get('panels', [])
 
     html = ''.join([
-        '<div class="immune-markers-section">',
         '<div class="section-common-title-frame">',
         '<div class="section-common-title-text">Иммунные маркеры</div>',
         '</div>',
         f'<div class="immune-marker-section-subtitle">{esc(data.get("section_subtitle", ""))}</div>',
-        ''.join(_panel_html(panel, idx) for idx, panel in enumerate(panels)),
-        '</div>',
+        ''.join(_panel_html(panel) for panel in panels),
     ])
 
     _render_html(html)

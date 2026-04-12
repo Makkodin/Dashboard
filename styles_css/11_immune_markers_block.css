@@ -45,8 +45,8 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.immune-marker-panel-grid--5 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+.immune-marker-panel-grid-row + .immune-marker-panel-grid-row {
+    margin-top: 14px;
 }
 
 .immune-marker-card {
@@ -58,6 +58,8 @@
     border-radius: 14px;
     padding: 14px 14px 12px 14px;
     box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .immune-marker-gene {
@@ -73,19 +75,28 @@
     line-height: 1.45;
     color: #475467;
     min-height: 72px;
+    max-height: 72px;
     margin-bottom: 12px;
+    overflow: hidden;
 }
 
 .immune-marker-chart-wrap {
     width: 100%;
+    height: 194px;
+    min-height: 194px;
+    max-height: 194px;
     margin-bottom: 12px;
+    display: flex;
+    align-items: stretch;
 }
 
 .immune-marker-chart {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     border-radius: 10px;
+    object-fit: contain;
+    object-position: center;
 }
 
 .immune-marker-meta {
@@ -118,7 +129,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 72px;
+    min-width: 88px;
     padding: 4px 10px;
     border-radius: 999px;
     border: 1px solid currentColor;
@@ -138,30 +149,6 @@
     font-style: italic;
 }
 
-@media (max-width: 1500px) {
-    .immune-marker-panel-grid--4,
-    .immune-marker-panel-grid--5 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 1100px) {
-    .immune-marker-panel-grid--3,
-    .immune-marker-panel-grid--4,
-    .immune-marker-panel-grid--5 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 760px) {
-    .immune-marker-panel-grid--3,
-    .immune-marker-panel-grid--4,
-    .immune-marker-panel-grid--5 {
-        grid-template-columns: 1fr;
-    }
-}
-
-
 .immune-marker-chart-wrap {
     padding-top: 2px;
 }
@@ -169,11 +156,6 @@
 .immune-marker-chart {
     overflow: visible;
 }
-
-.immune-marker-badge {
-    min-width: 88px;
-}
-
 
 .immune-marker-panel-info-row {
     margin-top: -4px;
@@ -218,4 +200,24 @@
 .immune-marker-tooltip:hover .immune-marker-tooltip-text {
     visibility: visible;
     opacity: 1;
+}
+
+@media (max-width: 1500px) {
+    .immune-marker-panel-grid--4 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 1100px) {
+    .immune-marker-panel-grid--3,
+    .immune-marker-panel-grid--4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .immune-marker-panel-grid--3,
+    .immune-marker-panel-grid--4 {
+        grid-template-columns: 1fr;
+    }
 }

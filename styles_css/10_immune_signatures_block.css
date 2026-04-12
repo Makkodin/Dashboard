@@ -22,6 +22,10 @@
     margin-bottom: 10px;
 }
 
+.immune-sign-legend-panel-info {
+    margin-bottom: 10px;
+}
+
 .immune-sign-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -83,6 +87,11 @@
     line-height: 1;
 }
 
+.immune-sign-card-info-row {
+    margin-top: -2px;
+    margin-bottom: 12px;
+}
+
 .immune-sign-rows {
     display: flex;
     flex-direction: column;
@@ -92,7 +101,7 @@
 
 .immune-sign-row {
     display: grid;
-    grid-template-columns: minmax(155px, 1.35fr) 4fr 44px;
+    grid-template-columns: minmax(155px, 1.25fr) 18px 4fr 44px;
     gap: 10px;
     align-items: center;
 }
@@ -101,6 +110,14 @@
     font-size: 12px;
     line-height: 1.25;
     color: #374151;
+    min-width: 0;
+}
+
+.immune-sign-row-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
 }
 
 .immune-sign-row-bar {
@@ -131,7 +148,7 @@
 }
 
 .immune-sign-legend {
-    width: min(420px, 100%);
+    width: 100%;
 }
 
 .immune-sign-legend-scale {
@@ -169,45 +186,6 @@
     color: #FFFFFF;
 }
 
-@media (max-width: 1100px) {
-    .immune-sign-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .immune-sign-grid-spacer {
-        display: none;
-    }
-
-    .immune-sign-grid-item {
-        display: block;
-    }
-
-    .immune-sign-card {
-        height: auto;
-    }
-}
-
-
-.immune-sign-legend-panel-info {
-    margin-bottom: 10px;
-}
-
-.immune-sign-legend {
-    width: 100%;
-}
-
-.immune-sign-card-info-row {
-    margin-top: -2px;
-    margin-bottom: 12px;
-}
-
-.immune-sign-row-label-wrap {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    min-width: 0;
-}
-
 .immune-sign-tooltip {
     position: relative;
     display: inline-flex;
@@ -243,4 +221,26 @@
 .immune-sign-tooltip:hover .immune-sign-tooltip-text {
     visibility: visible;
     opacity: 1;
+}
+
+@media (max-width: 1100px) {
+    .immune-sign-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .immune-sign-grid-spacer {
+        display: none;
+    }
+
+    .immune-sign-grid-item {
+        display: block;
+    }
+
+    .immune-sign-card {
+        height: auto;
+    }
+
+    .immune-sign-row {
+        grid-template-columns: minmax(130px, 1.25fr) 18px 3fr 44px;
+    }
 }
