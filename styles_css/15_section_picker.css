@@ -1,0 +1,122 @@
+.section-picker-marker {
+    display: none;
+}
+
+/* Outer picker panel */
+[data-testid="stMainBlockContainer"]:has(.section-picker-marker),
+.block-container:has(.section-picker-marker) {
+    max-width: 1420px;
+    background: #F3F8FF !important;
+    border: 1px solid #D7E6FB !important;
+    border-radius: 20px;
+    padding: 24px 28px 24px 28px !important;
+    margin-top: 26px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+}
+
+.section-picker-head {
+    margin: 0 0 16px 0;
+}
+
+.section-picker-title {
+    text-align: left;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #111827;
+    margin: 0 0 8px 0;
+}
+
+.section-picker-subtitle {
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #5B6472;
+    max-width: 980px;
+    margin: 0 0 2px 0;
+}
+
+/* Option cards */
+[data-testid="stAppViewContainer"]:has(.section-picker-marker) [data-testid="stVerticalBlockBorderWrapper"]:has(.section-picker-option-marker) {
+    background: rgba(255, 255, 255, 0.84) !important;
+    border: 1px solid #D8E8FF !important;
+    border-radius: 16px !important;
+    padding: 10px 14px 12px 14px !important;
+    min-height: 96px;
+    box-sizing: border-box;
+}
+
+[data-testid="stAppViewContainer"]:has(.section-picker-marker) [data-testid="stVerticalBlockBorderWrapper"]:has(.section-picker-option-marker) [data-testid="stCheckbox"] {
+    margin-bottom: 6px;
+}
+
+[data-testid="stAppViewContainer"]:has(.section-picker-marker) [data-testid="stVerticalBlockBorderWrapper"]:has(.section-picker-option-marker) [data-testid="stCheckbox"] label {
+    width: 100%;
+}
+
+[data-testid="stAppViewContainer"]:has(.section-picker-marker) [data-testid="stVerticalBlockBorderWrapper"]:has(.section-picker-option-marker) [data-testid="stCheckbox"] p {
+    font-size: 15px;
+    line-height: 1.35;
+    color: #1F2937;
+    font-weight: 700;
+}
+
+.section-picker-option-desc {
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: #667085;
+    margin-top: 0;
+    min-height: 34px;
+}
+
+/* Checkbox colors for actual BaseWeb DOM */
+[data-testid="stAppViewContainer"]:has(.section-picker-marker) [data-testid="stCheckbox"] label[data-baseweb="checkbox"] > span:first-child {
+    background: #FFFFFF !important;
+    border: 1.5px solid #1E3A8A !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+}
+
+[data-testid="stAppViewContainer"]:has(.section-picker-marker) [data-testid="stCheckbox"] label[data-baseweb="checkbox"]:has(input:checked) > span:first-child {
+    background: #1E3A8A !important;
+    border-color: #1E3A8A !important;
+}
+
+[data-testid="stAppViewContainer"]:has(.section-picker-marker) [data-testid="stCheckbox"] label[data-baseweb="checkbox"]:has(input:checked) > span:first-child svg,
+[data-testid="stAppViewContainer"]:has(.section-picker-marker) [data-testid="stCheckbox"] label[data-baseweb="checkbox"]:has(input:checked) > span:first-child path {
+    fill: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+    color: #FFFFFF !important;
+}
+
+[data-testid="stAppViewContainer"]:has(.section-picker-marker) [data-testid="stCheckbox"] label[data-baseweb="checkbox"]:hover > span:first-child {
+    border-color: #1E3A8A !important;
+}
+
+/* Buttons */
+[data-testid="stAppViewContainer"]:has(.section-picker-marker) [data-testid="stButton"] > button {
+    min-height: 38px;
+    padding: 0 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+    [data-testid="stMainBlockContainer"]:has(.section-picker-marker),
+    .block-container:has(.section-picker-marker) {
+        max-width: none;
+        padding: 18px 18px 20px 18px !important;
+    }
+
+    .section-picker-option-desc {
+        min-height: 0;
+    }
+}
+
+
+[data-testid="stAppViewContainer"]:has(.section-picker-marker) [data-testid="stMain"] {
+    padding-top: 8px !important;
+}

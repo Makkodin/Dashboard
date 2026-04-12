@@ -6,7 +6,7 @@ from datetime import date
 import streamlit as st
 
 from core.genetic_profile import load_rare_events_text
-from core.io_utils import read_json, read_text, serialize_date, write_json, write_text
+from core.io_utils import read_json, read_text, serialize_date, write_json
 from core.paths import (
     biomaterial_path,
     contacts_text_path,
@@ -47,6 +47,18 @@ EDIT_DRAFT_KEYS = {
 JSON_DEFAULTS = {"meta": DEFAULT_META, "patient": DEFAULT_PATIENT, "biomaterial": DEFAULT_BIOMATERIAL, "rare_events": DEFAULT_RARE_EVENTS}
 JSON_PATHS = {"meta": meta_path, "patient": patient_path, "biomaterial": biomaterial_path, "rare_events": rare_events_path}
 
+SECTION_OPTIONS = [
+    ("meta", "Метаданные отчёта"),
+    ("clinical", "Клиническая информация"),
+    ("genetic", "Генетический профиль"),
+    ("immune_status", "Иммунный статус"),
+    ("immune_signatures", "Иммунные сигнатуры"),
+    ("immune_markers", "Иммунные маркеры"),
+    ("recommendations", "Рекомендации"),
+    ("contacts", "Контакты / Лаборатория"),
+    ("annotations", "Аннотация блоков"),
+]
+
 
 def ensure_state() -> None:
     if "selected_sample" not in st.session_state:
@@ -58,15 +70,38 @@ def ensure_state() -> None:
         if flag not in st.session_state:
             st.session_state[flag] = False
 
-    for block_name, default_data in JSON_DEFAULTS.items():
-        data_key = EDIT_DATA_KEYS[block_name]
-        draft_key = EDIT_DRAFT_KEYS[block_name]
-        st.session_state.setdefault(data_key, deepcopy(default_data))
-        st.session_state.setdefault(draft_key, deepcopy(default_data))
+    default_sections = [key for key, _ in SECTION_OPTIONS]
+    if "dashboard_sections_selected" not in st.session_state:
+        st.session_state["dashboard_sections_selected"] = default_sections
+    if "dashboard_sections_confirmed" not in st.session_state:
+        st.session_state["dashboard_sections_confirmed"] = False
 
-    st.session_state.setdefault("treatment_data", [])
-    st.session_state.setdefault("treatment_draft", [])
-    st.session_state.setdefault("contacts_text", "")
+    for key, _ in SECTION_OPTIONS:
+        picker_key = f"section_picker_{key}"
+        if picker_key not in st.session_state:
+            st.session_state[picker_key] = key in st.session_state["dashboard_sections_selected"]
+
+
+def dashboard_section_options() -> list[tuple[str, str]]:
+    return SECTION_OPTIONS
+
+
+def open_section_picker() -> None:
+    selected = set(st.session_state.get("dashboard_sections_selected", []))
+    for key, _ in SECTION_OPTIONS:
+        st.session_state[f"section_picker_{key}"] = key in selected
+    st.session_state["dashboard_sections_confirmed"] = False
+
+
+def save_section_selection(section_keys: list[str]) -> None:
+    allowed = {key for key, _ in SECTION_OPTIONS}
+    cleaned = [key for key in section_keys if key in allowed]
+    st.session_state["dashboard_sections_selected"] = cleaned
+    st.session_state["dashboard_sections_confirmed"] = True
+
+
+def is_section_enabled(section_key: str) -> bool:
+    return section_key in set(st.session_state.get("dashboard_sections_selected", []))
 
 
 def _load_rare_events_block(sample: str) -> dict:
