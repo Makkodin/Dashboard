@@ -1,0 +1,75 @@
+.footer-mode-wrap {
+    position: fixed;
+    left: 2rem;
+    right: 2rem;
+    bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.625rem;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.footer-mode-label,
+.footer-mode-pill,
+.footer-mode-pdf-button {
+    pointer-events: auto;
+}
+
+.footer-mode-label {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #111111;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 0.5rem 0.75rem;
+    border-radius: 62.4375rem;
+    border: 0.0625rem solid #E5E7EB;
+}
+
+.footer-mode-pill {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    padding: 0.5rem 0.875rem;
+    border-radius: 62.4375rem;
+    border: 0.0625rem solid #E5E7EB;
+    background: rgba(255, 255, 255, 0.96);
+}
+
+.footer-mode-pill-view {
+    color: #1F2937;
+}
+
+.footer-mode-pill-edit {
+    color: #7C2D12;
+    background: #FFEDD5;
+    border-color: #FDBA74;
+}
+
+.footer-mode-pdf-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.3125rem;
+    padding: 0.5rem 0.875rem;
+    border-radius: 62.4375rem;
+    border: 0.0625rem solid #D1D5DB;
+    background: rgba(255, 255, 255, 0.96);
+    color: #111827;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.footer-mode-pdf-button:hover {
+    background: #F9FAFB;
+    border-color: #C7CDD6;
+}
+
+.footer-mode-pdf-button:active {
+    background: #F3F4F6;
+}
