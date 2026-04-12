@@ -1,0 +1,44 @@
+.annotation-section-title {
+    margin-top: 8px;
+}
+
+.annotation-blocks-wrap {
+    background: #FFFFFF;
+    border: 1px solid #E5EAF1;
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+.annotation-blocks-title {
+    font-size: 15px;
+    line-height: 1.35;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 6px 0;
+}
+
+.annotation-blocks-subtitle {
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #111111;
+    margin: 10px 0 4px 0;
+}
+
+.annotation-blocks-text,
+.annotation-blocks-bullet {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #111111;
+    margin: 0 0 4px 0;
+}
+
+.annotation-blocks-bullet {
+    padding-left: 14px;
+}
+
+.annotation-blocks-gap {
+    height: 8px;
+}
