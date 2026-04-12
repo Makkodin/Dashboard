@@ -1,0 +1,74 @@
+.contacts-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.6fr 1.3fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.contacts-grid-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contacts-kv {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-height: 40px;
+}
+
+.contacts-kv-label {
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #374151;
+}
+
+.contacts-kv-value {
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #111111;
+    word-break: break-word;
+}
+
+.contacts-footer-row {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid #E7EBF0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.contacts-copyright {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #6B7280;
+}
+
+@media (max-width: 1100px) {
+    .contacts-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+.contacts-kv-extra {
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: #6B7280;
+    margin-top: 4px;
+}
