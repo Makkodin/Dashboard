@@ -327,3 +327,25 @@
     visibility: visible;
     opacity: 1;
 }
+
+
+.immune-status-metric-label-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 28px;
+    margin-bottom: 8px;
+}
+
+.immune-status-metric-label-row .immune-status-metric-label {
+    margin-bottom: 0;
+}
+
+.immune-status-metric-label-row .immune-status-tooltip {
+    flex: 0 0 auto;
+    margin-top: 0;
+}
+
+.immune-status-metric-info {
+    display: none;
+}

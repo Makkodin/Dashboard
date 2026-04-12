@@ -55,6 +55,15 @@ def _tooltip_html(label: str, text: str) -> str:
     ])
 
 
+def _metric_label_html(text: str, tooltip: str) -> str:
+    return "".join([
+        '<div class="immune-status-metric-label-row">',
+        f'<div class="immune-status-metric-label">{esc(text)}</div>',
+        _tooltip_html("ℹ", tooltip),
+        '</div>',
+    ])
+
+
 def _purity_tone(purity_percent: float) -> tuple[str, str]:
     if purity_percent >= 60:
         return "#FCE7F3", "#9D174D"
@@ -143,9 +152,9 @@ def render_immune_status_block() -> None:
         _stack_bar_html(composition),
         '</div></div><div class="immune-status-right-col">',
         '<div class="immune-status-metrics-row">',
-        f'<div class="immune-status-metric-card immune-status-metric-card--blue"><div class="immune-status-metric-label">Всего иммунных клеток</div><div class="immune-status-metric-info">{_tooltip_html("ℹ", TOTAL_IMMUNE_TOOLTIP)}</div><div class="immune-status-metric-value">{total_immune:.1f}%</div></div>',
-        f'<div class="immune-status-metric-card immune-status-metric-card--green"><div class="immune-status-metric-label">CD8⁺/Treg</div><div class="immune-status-metric-info">{_tooltip_html("ℹ", CD8_TREG_TOOLTIP)}</div><div class="immune-status-metric-value">{cd8_treg_ratio:.2f}</div></div>',
-        f'<div class="immune-status-metric-card immune-status-metric-card--violet"><div class="immune-status-metric-label">Эффект. T-клетки</div><div class="immune-status-metric-info">{_tooltip_html("ℹ", EFFECTOR_T_TOOLTIP)}</div><div class="immune-status-metric-value">{effector_t_cells:.1f}%</div></div>',
+        f'<div class="immune-status-metric-card immune-status-metric-card--blue">{_metric_label_html("Всего иммунных клеток", TOTAL_IMMUNE_TOOLTIP)}<div class="immune-status-metric-value">{total_immune:.1f}%</div></div>',
+        f'<div class="immune-status-metric-card immune-status-metric-card--green">{_metric_label_html("CD8⁺/Treg", CD8_TREG_TOOLTIP)}<div class="immune-status-metric-value">{cd8_treg_ratio:.2f}</div></div>',
+        f'<div class="immune-status-metric-card immune-status-metric-card--violet">{_metric_label_html("Эффект. T-клетки", EFFECTOR_T_TOOLTIP)}<div class="immune-status-metric-value">{effector_t_cells:.1f}%</div></div>',
         '</div><div class="immune-status-rows">',
         _composition_rows_html(composition),
         '</div></div></div>',
