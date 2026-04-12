@@ -50,6 +50,12 @@ render_sample_selector()
 sync_sample_state()
 
 render_title_block()
+
+sample = st.session_state.get("selected_sample", "")
+if not sample:
+    st.warning("Не найдено ни одного sample в папке data/. Добавьте хотя бы одну sample-папку.")
+    st.stop()
+
 render_meta_block()
 
 st.markdown(
