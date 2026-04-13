@@ -1,0 +1,43 @@
+.sample-selector-title {
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 0.625rem;
+}
+
+.sample-selector-info-box {
+    background: #FFFFFF;
+    border: 0.0625rem solid #E5E7EB;
+    border-radius: 0.75rem;
+    padding: 0.75rem 0.875rem;
+    margin-top: 1.125rem;
+}
+
+.sample-selector-path-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.375rem;
+}
+
+.sample-selector-path-row:last-child {
+    margin-bottom: 0;
+}
+
+.sample-selector-path-label {
+    font-size: 0.7812rem;
+    font-weight: 700;
+    color: #374151;
+}
+
+.sample-selector-path-value {
+    font-size: 0.7812rem;
+    font-weight: 400;
+    color: #111111;
+}
+
+.sample-selector-warning {
+    font-size: 0.7812rem;
+    color: #B91C1C;
+    margin-top: 0.5rem;
+}
