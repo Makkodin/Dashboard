@@ -1,6 +1,0 @@
-Total number of variants= 397
-Non-informative variants= 0
-Variants after filters= 344
-Effective Genome Size= 32999178
-
-TMB= 10.42
