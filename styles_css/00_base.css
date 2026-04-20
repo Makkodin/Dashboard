@@ -1,0 +1,672 @@
+/* Force Streamlit light theme variables so BaseWeb popovers/calendar stop inheriting dark colors */
+:root,
+html,
+body,
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-testid="stMainBlockContainer"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-testid="stMainBlockContainer"] {
+    --st-background-color: #FFFFFF !important;
+    --st-secondary-background-color: #FFFFFF !important;
+    --st-text-color: #111111 !important;
+    --st-border-color: transparent !important;
+    --st-border-color-light: transparent !important;
+    --st-widget-border-color: transparent !important;
+    color-scheme: light !important;
+}
+
+/* Этот CSS-блок отвечает за общие CSS-переменные проекта.
+      Здесь задаются базовые цвета, размеры и другие параметры, которые затем используются во всём интерфейсе. */
+:root {
+    --page-bg: #FFFFFF;
+    --text-main: #111111;
+    --blue-title: #2454D3;
+    --line-dark: #1A1A1A;
+    --card-bg: #F3F4F6;
+    --card-border: #E5E7EB;
+    --status-final-bg: #DCFCE7;
+    --status-final-text: #166534;
+    --status-temp-bg: #FEF3C7;
+    --status-temp-text: #92400E;
+}
+
+html,
+body,
+[data-testid="stAppViewContainer"],
+.stApp,
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"],
+/* Этот CSS-блок отвечает за элемент интерфейса «.block-container».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+.block-container {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+}
+
+input[type="checkbox"],
+/* Этот CSS-блок отвечает за элемент интерфейса «input[type="radio"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+input[type="radio"] {
+    accent-color: #1E3A8A !important;
+}
+
+/* Верхняя системная панель Streamlit */
+[data-testid="stHeader"],
+[data-testid="stAppHeader"],
+header[data-testid="stHeader"],
+/* Этот CSS-блок отвечает за элемент интерфейса «header[data-testid="stAppHeader"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+header[data-testid="stAppHeader"] {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+    border-bottom: 0.0625rem solid #E5E7EB !important;
+}
+
+[data-testid="stHeader"] *,
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-testid="stAppHeader"] *».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-testid="stAppHeader"] * {
+    color: #111111 !important;
+}
+
+[data-testid="stToolbar"],
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-testid="stToolbar"] *».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-testid="stToolbar"] * {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-testid="stDecoration"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-testid="stDecoration"] {
+    background: #FFFFFF !important;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"],
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-testid="stSidebarContent"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-testid="stSidebarContent"] {
+    background: #F3F4F6 !important;
+}
+
+/* Общий заголовок секции */
+/* Этот CSS-блок отвечает за заголовок страницы или раздела.
+      Используется для названия отчёта, подзаголовков и связанных элементов. */
+.section-common-title-frame {
+    border-top: 0.125rem solid #1A1A1A;
+    border-bottom: 0.125rem solid #1A1A1A;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    margin-top: 1.375rem;
+    margin-bottom: 1rem;
+    background: #FFFFFF !important;
+}
+
+/* Этот CSS-блок отвечает за заголовок страницы или раздела.
+      Используется для названия отчёта, подзаголовков и связанных элементов. */
+.section-common-title-text {
+    font-size: 1.125rem;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #111111;
+}
+
+/* Кнопки */
+.stButton > button,
+.stButton > button:active,
+.stButton > button:visited,
+button[kind="secondary"],
+/* Этот CSS-блок отвечает за элемент интерфейса «button[kind="primary"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+button[kind="primary"] {
+    background-color: #F3F4F6 !important;
+    color: #111111 !important;
+    border: 0.0625rem solid #D1D5DB !important;
+    border-radius: 0.625rem !important;
+    box-shadow: none !important;
+    background-image: none !important;
+}
+
+.stButton > button:hover,
+button[kind="secondary"]:hover,
+/* Этот CSS-блок отвечает за элемент интерфейса «button[kind="primary"]:hover».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+button[kind="primary"]:hover {
+    background-color: #E5E7EB !important;
+    color: #111111 !important;
+    border: 0.0625rem solid #C7CDD4 !important;
+}
+
+.stButton > button:focus,
+.stButton > button:focus-visible,
+button[kind="secondary"]:focus,
+button[kind="secondary"]:focus-visible,
+button[kind="primary"]:focus,
+/* Этот CSS-блок отвечает за элемент интерфейса «button[kind="primary"]:focus-visible».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+button[kind="primary"]:focus-visible {
+    background-color: #F3F4F6 !important;
+    color: #111111 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Поля */
+label,
+.stTextInput label,
+.stTextArea label,
+.stDateInput label,
+/* Этот CSS-блок отвечает за элемент интерфейса «.stSelectbox label».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+.stSelectbox label {
+    color: #111111 !important;
+    font-size: 0.7812rem !important;
+    font-weight: 600 !important;
+}
+
+[data-testid="stTextInputRootElement"] input,
+[data-testid="stTextArea"] textarea,
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="select"] > div».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="select"] > div {
+    background-color: #F3F4F6 !important;
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+    border-radius: 0.625rem !important;
+}
+
+[data-testid="stTextInputRootElement"] > div,
+[data-testid="stTextAreaRootElement"] > div,
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="select"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="select"] {
+    border-color: #D1D5DB !important;
+    background: #F3F4F6 !important;
+}
+
+[data-baseweb="select"] span,
+[data-baseweb="select"] div,
+[data-baseweb="select"] svg,
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="select"] path».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="select"] path {
+    color: #111111 !important;
+    fill: #111111 !important;
+    stroke: #111111 !important;
+}
+
+/* Выпадающие меню selectbox / multiselect */
+div[data-baseweb="popover"],
+div[data-baseweb="popover"] > div,
+ul[role="listbox"],
+[role="listbox"],
+[role="option"],
+/* Этот CSS-блок отвечает за элемент интерфейса «li[role="option"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+li[role="option"] {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+}
+
+ul[role="listbox"] *,
+[role="option"] *,
+/* Этот CSS-блок отвечает за элемент интерфейса «li[role="option"] *».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+li[role="option"] * {
+    color: #111111 !important;
+}
+
+[role="option"][aria-selected="true"],
+/* Этот CSS-блок отвечает за элемент интерфейса «li[role="option"][aria-selected="true"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+li[role="option"][aria-selected="true"] {
+    background: #EEF2FF !important;
+    color: #111111 !important;
+}
+
+[role="option"]:hover,
+/* Этот CSS-блок отвечает за элемент интерфейса «li[role="option"]:hover».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+li[role="option"]:hover {
+    background: #F3F4F6 !important;
+    color: #111111 !important;
+}
+
+/* Меню/попапы baseweb */
+[data-baseweb="menu"],
+[data-baseweb="menu"] *,
+[data-baseweb="popover"] [data-baseweb="menu"],
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="popover"] [data-baseweb="menu"] *».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="popover"] [data-baseweb="menu"] * {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+}
+
+input::placeholder,
+/* Этот CSS-блок отвечает за элемент интерфейса «textarea::placeholder».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+textarea::placeholder {
+    color: #6B7280 !important;
+    opacity: 1;
+}
+
+/* Date input */
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="input"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="input"] {
+    background-color: #F3F4F6 !important;
+    border: 0.0625rem solid #D1D5DB !important;
+    border-radius: 0.625rem !important;
+    box-shadow: none !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="base-input"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="base-input"] {
+    background-color: #F3F4F6 !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="input"] div».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="input"] div {
+    background-color: #F3F4F6 !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «input[data-testid="stDateInputField"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+input[data-testid="stDateInputField"] {
+    background-color: #F3F4F6 !important;
+    color: #111111 !important;
+    -webkit-text-fill-color: #111111 !important;
+    caret-color: #111111 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «input[data-testid="stDateInputField"]::placeholder».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+input[data-testid="stDateInputField"]::placeholder {
+    color: #6B7280 !important;
+    -webkit-text-fill-color: #6B7280 !important;
+}
+
+[data-baseweb="input"] svg,
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="input"] path».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="input"] path {
+    fill: #111111 !important;
+    color: #111111 !important;
+    stroke: #111111 !important;
+}
+
+/* Popup calendar */
+/* Этот CSS-блок отвечает за элемент интерфейса «div[role="dialog"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+div[role="dialog"] {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «div[role="dialog"] *».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+div[role="dialog"] * {
+    color: #111111 !important;
+}
+
+
+/* Unified edit-mode borders across dashboard */
+[data-testid="stTextInputRootElement"] > div,
+[data-testid="stTextAreaRootElement"] > div,
+[data-testid="stSelectbox"] [data-baseweb="select"],
+[data-testid="stSelectbox"] [data-baseweb="select"] > div,
+[data-testid="stMultiSelect"] [data-baseweb="select"],
+[data-testid="stMultiSelect"] [data-baseweb="select"] > div,
+[data-testid="stDateInput"] [data-baseweb="input"],
+[data-testid="stDateInput"] [data-baseweb="input"] > div,
+[data-testid="stColorPicker"] [data-baseweb="input"],
+[data-testid="stColorPicker"] [data-baseweb="input"] > div,
+[data-testid="stNumberInput"] [data-baseweb="input"],
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-testid="stNumberInput"] [data-baseweb="input"] > div».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-testid="stNumberInput"] [data-baseweb="input"] > div {
+    border: 0.0625rem solid #D1D5DB !important;
+    border-color: #D1D5DB !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+[data-testid="stTextInputRootElement"] > div:hover,
+[data-testid="stTextInputRootElement"] > div:focus-within,
+[data-testid="stTextAreaRootElement"] > div:hover,
+[data-testid="stTextAreaRootElement"] > div:focus-within,
+[data-testid="stSelectbox"] [data-baseweb="select"]:hover,
+[data-testid="stSelectbox"] [data-baseweb="select"]:focus-within,
+[data-testid="stSelectbox"] [data-baseweb="select"] > div:hover,
+[data-testid="stSelectbox"] [data-baseweb="select"] > div:focus-within,
+[data-testid="stMultiSelect"] [data-baseweb="select"]:hover,
+[data-testid="stMultiSelect"] [data-baseweb="select"]:focus-within,
+[data-testid="stMultiSelect"] [data-baseweb="select"] > div:hover,
+[data-testid="stMultiSelect"] [data-baseweb="select"] > div:focus-within,
+[data-testid="stDateInput"] [data-baseweb="input"]:hover,
+[data-testid="stDateInput"] [data-baseweb="input"]:focus-within,
+[data-testid="stDateInput"] [data-baseweb="input"] > div:hover,
+[data-testid="stDateInput"] [data-baseweb="input"] > div:focus-within,
+[data-testid="stColorPicker"] [data-baseweb="input"]:hover,
+[data-testid="stColorPicker"] [data-baseweb="input"]:focus-within,
+[data-testid="stColorPicker"] [data-baseweb="input"] > div:hover,
+[data-testid="stColorPicker"] [data-baseweb="input"] > div:focus-within,
+[data-testid="stNumberInput"] [data-baseweb="input"]:hover,
+[data-testid="stNumberInput"] [data-baseweb="input"]:focus-within,
+[data-testid="stNumberInput"] [data-baseweb="input"] > div:hover,
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-testid="stNumberInput"] [data-baseweb="input"] > div:focus-within».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-testid="stNumberInput"] [data-baseweb="input"] > div:focus-within {
+    border-color: #D1D5DB !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* White calendar popup for report date editing */
+div[role="dialog"],
+div[role="dialog"] > div,
+div[role="dialog"] [data-baseweb="calendar"],
+div[role="dialog"] [data-baseweb="calendar"] > div,
+div[role="dialog"] [data-baseweb="datepicker"],
+/* Этот CSS-блок отвечает за элемент интерфейса «div[role="dialog"] [data-baseweb="popover"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+div[role="dialog"] [data-baseweb="popover"] {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+}
+
+div[role="dialog"] button,
+div[role="dialog"] table,
+div[role="dialog"] thead,
+div[role="dialog"] tbody,
+div[role="dialog"] tr,
+div[role="dialog"] th,
+div[role="dialog"] td,
+div[role="dialog"] span,
+div[role="dialog"] p,
+div[role="dialog"] svg,
+/* Этот CSS-блок отвечает за элемент интерфейса «div[role="dialog"] path».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+div[role="dialog"] path {
+    color: #111111 !important;
+    fill: #111111 !important;
+    stroke: #111111 !important;
+}
+
+
+/* === Final overrides: borderless edit widgets + light datepicker === */
+/* Этот CSS-блок отвечает за элемент интерфейса «html, body, .stApp, [data-testid="stAppViewContainer"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+html, body, .stApp, [data-testid="stAppViewContainer"] {
+    color-scheme: light !important;
+}
+
+/* Remove visible borders from all editable widgets */
+[data-testid="stTextInputRootElement"] > div,
+[data-testid="stTextInputRootElement"] > div > div,
+[data-testid="stTextArea"] > div,
+[data-testid="stTextArea"] > div > div,
+[data-testid="stTextAreaRootElement"] > div,
+[data-testid="stTextAreaRootElement"] > div > div,
+[data-testid="stTextArea"] [data-baseweb="base-input"],
+[data-testid="stTextArea"] [data-baseweb="textarea"],
+[data-testid="stSelectbox"] [data-baseweb="select"],
+[data-testid="stSelectbox"] [data-baseweb="select"] > div,
+[data-testid="stMultiSelect"] [data-baseweb="select"],
+[data-testid="stMultiSelect"] [data-baseweb="select"] > div,
+[data-testid="stDateInput"] [data-baseweb="input"],
+[data-testid="stDateInput"] [data-baseweb="input"] > div,
+[data-testid="stDateInput"] [data-baseweb="base-input"],
+[data-testid="stColorPicker"] [data-baseweb="input"],
+[data-testid="stColorPicker"] [data-baseweb="input"] > div,
+[data-testid="stNumberInput"] [data-baseweb="input"],
+[data-testid="stNumberInput"] [data-baseweb="input"] > div,
+[data-baseweb="input"],
+[data-baseweb="input"] > div,
+[data-baseweb="base-input"],
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="base-input"] > div».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="base-input"] > div {
+    border: 0.0625rem solid transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background: #F3F4F6 !important;
+}
+
+[data-testid="stTextInputRootElement"] > div:hover,
+[data-testid="stTextInputRootElement"] > div:focus-within,
+[data-testid="stTextInputRootElement"] > div > div:hover,
+[data-testid="stTextInputRootElement"] > div > div:focus-within,
+[data-testid="stTextArea"] > div:hover,
+[data-testid="stTextArea"] > div:focus-within,
+[data-testid="stTextArea"] > div > div:hover,
+[data-testid="stTextArea"] > div > div:focus-within,
+[data-testid="stTextAreaRootElement"] > div:hover,
+[data-testid="stTextAreaRootElement"] > div:focus-within,
+[data-testid="stTextAreaRootElement"] > div > div:hover,
+[data-testid="stTextAreaRootElement"] > div > div:focus-within,
+[data-testid="stTextArea"] [data-baseweb="base-input"]:hover,
+[data-testid="stTextArea"] [data-baseweb="base-input"]:focus-within,
+[data-testid="stTextArea"] [data-baseweb="textarea"]:hover,
+[data-testid="stTextArea"] [data-baseweb="textarea"]:focus-within,
+[data-testid="stSelectbox"] [data-baseweb="select"]:hover,
+[data-testid="stSelectbox"] [data-baseweb="select"]:focus-within,
+[data-testid="stSelectbox"] [data-baseweb="select"] > div:hover,
+[data-testid="stSelectbox"] [data-baseweb="select"] > div:focus-within,
+[data-testid="stMultiSelect"] [data-baseweb="select"]:hover,
+[data-testid="stMultiSelect"] [data-baseweb="select"]:focus-within,
+[data-testid="stMultiSelect"] [data-baseweb="select"] > div:hover,
+[data-testid="stMultiSelect"] [data-baseweb="select"] > div:focus-within,
+[data-testid="stDateInput"] [data-baseweb="input"]:hover,
+[data-testid="stDateInput"] [data-baseweb="input"]:focus-within,
+[data-testid="stDateInput"] [data-baseweb="input"] > div:hover,
+[data-testid="stDateInput"] [data-baseweb="input"] > div:focus-within,
+[data-testid="stDateInput"] [data-baseweb="base-input"]:hover,
+[data-testid="stDateInput"] [data-baseweb="base-input"]:focus-within,
+[data-testid="stColorPicker"] [data-baseweb="input"]:hover,
+[data-testid="stColorPicker"] [data-baseweb="input"]:focus-within,
+[data-testid="stColorPicker"] [data-baseweb="input"] > div:hover,
+[data-testid="stColorPicker"] [data-baseweb="input"] > div:focus-within,
+[data-testid="stNumberInput"] [data-baseweb="input"]:hover,
+[data-testid="stNumberInput"] [data-baseweb="input"]:focus-within,
+[data-testid="stNumberInput"] [data-baseweb="input"] > div:hover,
+[data-testid="stNumberInput"] [data-baseweb="input"] > div:focus-within,
+[data-baseweb="input"]:hover,
+[data-baseweb="input"]:focus-within,
+[data-baseweb="input"] > div:hover,
+[data-baseweb="input"] > div:focus-within,
+[data-baseweb="base-input"]:hover,
+[data-baseweb="base-input"]:focus-within,
+[data-baseweb="base-input"] > div:hover,
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="base-input"] > div:focus-within».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="base-input"] > div:focus-within {
+    border: 0.0625rem solid transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Make text areas visually identical to other fields */
+[data-testid="stTextArea"] textarea,
+[data-testid="stTextAreaRootElement"] textarea,
+/* Этот CSS-блок отвечает за элемент интерфейса «textarea».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+textarea {
+    background: #F3F4F6 !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* White date picker / calendar popup */
+body > div[data-baseweb="portal"],
+body > div[data-baseweb="layer"],
+body > div[data-baseweb="popover"],
+body > div[data-baseweb="portal"] > div,
+body > div[data-baseweb="layer"] > div,
+body > div[data-baseweb="popover"] > div,
+div[role="dialog"],
+div[role="dialog"] > div,
+[data-baseweb="popover"],
+[data-baseweb="popover"] > div,
+[data-baseweb="datepicker"],
+[data-baseweb="datepicker"] > div,
+[data-baseweb="calendar"],
+[data-baseweb="calendar"] > div,
+[data-baseweb="calendar"] table,
+[data-baseweb="calendar"] thead,
+[data-baseweb="calendar"] tbody,
+[data-baseweb="calendar"] tr,
+[data-baseweb="calendar"] td,
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="calendar"] th».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="calendar"] th {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #111111 !important;
+    color-scheme: light !important;
+}
+
+[data-baseweb="calendar"] *,
+[data-baseweb="datepicker"] *,
+/* Этот CSS-блок отвечает за элемент интерфейса «div[role="dialog"] *».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+div[role="dialog"] * {
+    color: #111111 !important;
+    fill: #111111 !important;
+    stroke: #111111 !important;
+}
+
+[data-baseweb="calendar"] button,
+[data-baseweb="datepicker"] button,
+/* Этот CSS-блок отвечает за элемент интерфейса «div[role="dialog"] button».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+div[role="dialog"] button {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #111111 !important;
+    box-shadow: none !important;
+}
+
+
+/* Strong BaseWeb datepicker overrides */
+[data-baseweb="popover"][class],
+[data-baseweb="popover"][class] > div,
+[data-baseweb="calendar"][class],
+[data-baseweb="calendar"][class] > div,
+[data-baseweb="calendar"] [role="application"],
+[data-baseweb="calendar"] [role="presentation"],
+[data-baseweb="calendar"] [role="grid"],
+[data-baseweb="calendar"] [role="row"],
+[data-baseweb="calendar"] [role="gridcell"],
+[data-baseweb="calendar"] [role="gridcell"] > div,
+[data-baseweb="calendar"] button,
+[data-baseweb="calendar"] button > span,
+[data-baseweb="calendar"] button > div,
+[data-baseweb="calendar"] svg,
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="calendar"] path».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="calendar"] path {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #111111 !important;
+    fill: #111111 !important;
+    stroke: #111111 !important;
+    box-shadow: none !important;
+    color-scheme: light !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="calendar"] [role="gridcell"][aria-label*="Selected"]».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="calendar"] [role="gridcell"][aria-label*="Selected"] {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="calendar"] [role="gridcell"][aria-label*="Selected"] > div».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="calendar"] [role="gridcell"][aria-label*="Selected"] > div {
+    background: #FF4B4B !important;
+    background-color: #FF4B4B !important;
+    color: #FFFFFF !important;
+    border-radius: 62.4375rem !important;
+}
+
+[data-baseweb="calendar"] [role="gridcell"]:empty,
+/* Этот CSS-блок отвечает за элемент интерфейса «[data-baseweb="calendar"] [role="gridcell"] > div:empty».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+[data-baseweb="calendar"] [role="gridcell"] > div:empty {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «.data-placeholder-frame».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+.data-placeholder-frame {
+    border: 0.0625rem solid var(--card-border) !important;
+    box-shadow: none !important;
+}
+
+.immune-status-card.data-placeholder-frame,
+/* Этот CSS-блок отвечает за оформление блока иммунного статуса.
+      Здесь задаётся внешний вид карточек, статусов и связанных подписей. */
+.immune-status-interpretation-card.data-placeholder-frame {
+    border: 0.0625rem solid var(--card-border) !important;
+    box-shadow: none !important;
+}

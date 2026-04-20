@@ -1,0 +1,755 @@
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+@media print {
+  @page {
+    size: 303mm 225mm;
+    margin: 5mm 6mm 6mm 6mm;
+  }
+
+  html,
+  body,
+  [data-testid="stAppViewContainer"],
+  .main,
+  .block-container,
+  [data-testid="stVerticalBlock"],
+  [data-testid="stHorizontalBlock"],
+  [data-testid="column"],
+  .element-container,
+  .stMarkdown,
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  .stContainer {
+    background: #ffffff !important;
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide Streamlit chrome and runtime-only UI */
+  [data-testid="stSidebar"],
+  [data-testid="stSidebarCollapsedControl"],
+  [data-testid="stToolbar"],
+  [data-testid="stHeader"],
+  [data-testid="stDecoration"],
+  [data-testid="stStatusWidget"],
+  [data-testid="stBottomBlockContainer"],
+  header,
+  footer,
+  .stDeployButton,
+  .stToast,
+  .stAlert,
+  .stException,
+  .footer-mode-wrap,
+  .footer-mode-card,
+  .footer-mode-text,
+  [class*="footer-mode"],
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  .no-print {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Hide all buttons and the empty columns that contain only buttons */
+  button,
+  [role="button"],
+  .stButton,
+  [data-testid="stButton"],
+  [data-testid="baseButton-secondary"],
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  [data-testid="baseButton-primary"] {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  div[data-testid="column"]:has([data-testid="stButton"]),
+  div[data-testid="column"]:has(button),
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  div[data-testid="column"]:has([role="button"]) {
+    display: none !important;
+    width: 0 !important;
+    max-width: 0 !important;
+    min-width: 0 !important;
+    flex: 0 0 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  div[data-testid="stHorizontalBlock"]:has(> div[data-testid="column"] [data-testid="stButton"]) > div[data-testid="column"]:not(:has([data-testid="stButton"])),
+  div[data-testid="stHorizontalBlock"]:has(> div[data-testid="column"] button) > div[data-testid="column"]:not(:has(button)),
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  div[data-testid="stHorizontalBlock"]:has(> div[data-testid="column"] [role="button"]) > div[data-testid="column"]:not(:has([role="button"])) {
+    flex: 1 1 0% !important;
+    width: auto !important;
+    max-width: none !important;
+  }
+
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  .block-container {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  img,
+  svg,
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  canvas {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Generic pagination safety */
+  .title-block-shell,
+  .meta-block-card,
+  .patient-block-card,
+  .treatment-timeline-shell,
+  .biomaterial-block-card,
+  .genetic-card,
+  .genetic-card-rare-events,
+  .immune-status-card,
+  .immune-sign-card,
+  .immune-marker-panel,
+  .immune-marker-card,
+  .recommendations-shell,
+  .recommendation-card,
+  .contacts-card,
+  .annotation-blocks-wrap,
+  .annotation-blocks-gap,
+  .immune-marker-chart-wrap,
+  .immune-marker-meta,
+  .immune-marker-meta-row,
+  .immune-marker-chart,
+  .element-container:has(.title-block-shell),
+  .element-container:has(.meta-block-card),
+  .element-container:has(.patient-block-grid),
+  .element-container:has(.treatment-timeline-shell),
+  .element-container:has(.biomaterial-block-grid),
+  .element-container:has(.genetic-top-grid),
+  .element-container:has(.genetic-card-rare-events),
+  .element-container:has(.immune-status-grid),
+  .element-container:has(.immune-sign-grid),
+  .element-container:has(.immune-marker-panel),
+  .element-container:has(.recommendations-shell),
+  .element-container:has(.contacts-card),
+/* Этот CSS-блок отвечает за блок аннотаций и поясняющих текстов.
+      Используется для стилизации карточек с текстовыми комментариями и заключениями. */
+  .element-container:has(.annotation-blocks-wrap) {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Section titles should travel with the next block */
+  .element-container:has(.meta-block-title-row),
+  .element-container:has(.meta-block-title-row) + .element-container,
+  .element-container:has(.patient-block-title-row),
+  .element-container:has(.patient-block-title-row) + .element-container,
+  .element-container:has(.treatment-block-title-row),
+  .element-container:has(.treatment-block-title-row) + .element-container,
+  .element-container:has(.biomaterial-block-title-row),
+  .element-container:has(.biomaterial-block-title-row) + .element-container,
+  .element-container:has(.section-common-title-frame),
+/* Этот CSS-блок отвечает за заголовок страницы или раздела.
+      Используется для названия отчёта, подзаголовков и связанных элементов. */
+  .element-container:has(.section-common-title-frame) + .element-container {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .element-container:has(.meta-block-title-row),
+  .element-container:has(.patient-block-title-row),
+  .element-container:has(.treatment-block-title-row),
+  .element-container:has(.biomaterial-block-title-row),
+/* Этот CSS-блок отвечает за заголовок страницы или раздела.
+      Используется для названия отчёта, подзаголовков и связанных элементов. */
+  .element-container:has(.section-common-title-frame) {
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .element-container:has(.meta-block-title-row) + .element-container,
+  .element-container:has(.patient-block-title-row) + .element-container,
+  .element-container:has(.treatment-block-title-row) + .element-container,
+  .element-container:has(.biomaterial-block-title-row) + .element-container,
+/* Этот CSS-блок отвечает за заголовок страницы или раздела.
+      Используется для названия отчёта, подзаголовков и связанных элементов. */
+  .element-container:has(.section-common-title-frame) + .element-container {
+    break-before: avoid-page !important;
+    page-break-before: avoid !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  /* Keep in-block subtitles with first content */
+  .immune-marker-section-subtitle,
+  .recommendations-subheading,
+  .immune-status-card-caption,
+/* Этот CSS-блок отвечает за заголовок страницы или раздела.
+      Используется для названия отчёта, подзаголовков и связанных элементов. */
+  .genetic-subblock-subtitle {
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
+  }
+
+  .immune-marker-section-subtitle + .immune-marker-panel,
+  .recommendations-subheading + .recommendation-card,
+  .genetic-subblock-subtitle + .genetic-table-wrap,
+/* Этот CSS-блок отвечает за оформление блока иммунного статуса.
+      Здесь задаётся внешний вид карточек, статусов и связанных подписей. */
+  .immune-status-card-caption + .immune-status-purity-panel {
+    break-before: avoid-page !important;
+    page-break-before: avoid !important;
+  }
+
+  /* Stronger keep-together for early report blocks */
+  .element-container:has(.title-block-shell),
+  .element-container:has(.meta-block-title-row),
+  .element-container:has(.meta-block-card),
+  .element-container:has(.section-common-title-frame),
+  .element-container:has(.patient-block-title-row),
+  .element-container:has(.patient-block-grid),
+  .element-container:has(.treatment-block-title-row),
+  .element-container:has(.treatment-timeline-shell),
+  .element-container:has(.biomaterial-block-title-row),
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  .element-container:has(.biomaterial-block-grid) {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    orphans: 3 !important;
+    widows: 3 !important;
+  }
+
+  .element-container:has(.title-block-shell),
+  .element-container:has(.meta-block-title-row),
+  .element-container:has(.section-common-title-frame),
+  .element-container:has(.patient-block-title-row),
+  .element-container:has(.treatment-block-title-row),
+/* Этот CSS-блок отвечает за заголовок страницы или раздела.
+      Используется для названия отчёта, подзаголовков и связанных элементов. */
+  .element-container:has(.biomaterial-block-title-row) {
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
+  }
+
+  .element-container:has(.meta-block-card),
+  .element-container:has(.patient-block-grid),
+  .element-container:has(.treatment-timeline-shell),
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  .element-container:has(.biomaterial-block-grid) {
+    break-before: avoid-page !important;
+    page-break-before: avoid !important;
+  }
+  /* Final annotations on separate page */
+  .annotation-blocks-wrap,
+/* Этот CSS-блок отвечает за блок аннотаций и поясняющих текстов.
+      Используется для стилизации карточек с текстовыми комментариями и заключениями. */
+  .element-container:has(.annotation-blocks-wrap) {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  /* Remove sticky/fixed/shadows that cause overlay in print */
+  .title-block-shell,
+  .meta-block-card,
+  .patient-block-card,
+  .treatment-timeline-shell,
+  .biomaterial-block-card,
+  .genetic-card,
+  .immune-status-card,
+  .immune-sign-card,
+  .immune-marker-panel,
+  .immune-marker-card,
+  .recommendation-card,
+  .contacts-card,
+  .annotation-blocks-wrap,
+  [style*="position: sticky"],
+  [style*="position:fixed"],
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  [style*="position: fixed"] {
+    box-shadow: none !important;
+    position: static !important;
+  }
+
+  /* Compact print rhythm */
+  .title-block-shell,
+  .meta-block-card,
+  .patient-block-card,
+  .treatment-timeline-shell,
+  .biomaterial-block-card,
+  .genetic-card,
+  .immune-status-card,
+  .immune-sign-card,
+  .immune-marker-panel,
+  .recommendation-card,
+/* Этот CSS-блок отвечает за блок контактов и служебной информации.
+      Через него оформляются текстовые данные и подписи в нижней части интерфейса. */
+  .contacts-card {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.375rem !important;
+    padding-top: 0.625rem !important;
+    padding-bottom: 0.625rem !important;
+  }
+
+  /* Treatment timeline fits horizontally */
+/* Этот CSS-блок отвечает за блок истории лечения.
+      Здесь задаётся оформление таймлайна, карточек и элементов, связанных с терапией пациента. */
+  .treatment-timeline-shell {
+    overflow: visible !important;
+    padding: 0.625rem 0.75rem 0.5rem 0.75rem !important;
+  }
+
+/* Этот CSS-блок отвечает за блок истории лечения.
+      Здесь задаётся оформление таймлайна, карточек и элементов, связанных с терапией пациента. */
+  .treatment-timeline-track {
+    min-width: 0 !important;
+    width: 100% !important;
+    gap: 0.5rem !important;
+    grid-auto-columns: 1fr !important;
+  }
+
+/* Этот CSS-блок отвечает за блок истории лечения.
+      Здесь задаётся оформление таймлайна, карточек и элементов, связанных с терапией пациента. */
+  .treatment-node { min-height: 9.375rem !important; }
+  .treatment-node-content {
+    min-height: 5.125rem !important;
+    padding: 0.5rem 0.625rem !important;
+  }
+/* Этот CSS-блок отвечает за блок истории лечения.
+      Здесь задаётся оформление таймлайна, карточек и элементов, связанных с терапией пациента. */
+  .treatment-stage { font-size: 0.75rem !important; }
+  .treatment-desc { font-size: 0.6875rem !important; line-height: 1.32 !important; }
+  .treatment-report-pill { max-width: 5.625rem !important; font-size: 0.5625rem !important; }
+
+  /* Grids */
+  .genetic-top-grid,
+  .immune-status-grid,
+  .immune-sign-grid,
+  .contacts-grid,
+  .patient-block-grid,
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  .biomaterial-block-grid {
+    width: 100% !important;
+    overflow: visible !important;
+    gap: 0.5rem !important;
+    align-items: stretch !important;
+  }
+
+  .genetic-card,
+  .genetic-card-top-row,
+  .immune-status-card,
+  .immune-status-card--deconv,
+  .immune-status-card--subtype,
+  .immune-sign-card,
+  .recommendation-card,
+/* Этот CSS-блок отвечает за блок контактов и служебной информации.
+      Через него оформляются текстовые данные и подписи в нижней части интерфейса. */
+  .contacts-card {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+/* Этот CSS-блок отвечает за элементы генетического профиля.
+      Через него оформляются карточки, подписи, таблицы и визуальные шкалы генетического блока. */
+  .genetic-table { font-size: 0.6875rem !important; }
+  .genetic-table thead th,
+  .genetic-table tbody td {
+    padding-top: 0.3125rem !important;
+    padding-bottom: 0.3125rem !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление блока иммунного статуса.
+      Здесь задаётся внешний вид карточек, статусов и связанных подписей. */
+  .immune-status-row {
+    grid-template-columns: minmax(5.375rem, 8.625rem) 1fr 2.625rem !important;
+    gap: 0.4375rem !important;
+  }
+
+  .immune-status-row-label,
+  .immune-status-row-value,
+  .immune-status-subtype-text,
+  .immune-status-interpretation-text,
+  .immune-sign-row-label,
+  .immune-sign-row-value,
+  .immune-sign-card-desc,
+  .immune-sign-summary,
+  .recommendation-card-body,
+  .contacts-kv,
+  .contacts-copyright,
+  .annotation-blocks-text,
+/* Этот CSS-блок отвечает за блок аннотаций и поясняющих текстов.
+      Используется для стилизации карточек с текстовыми комментариями и заключениями. */
+  .annotation-blocks-bullet {
+    font-size: 0.6875rem !important;
+    line-height: 1.35 !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление блока иммунного статуса.
+      Здесь задаётся внешний вид карточек, статусов и связанных подписей. */
+  .immune-status-metric-value { font-size: 1.375rem !important; }
+
+  .immune-marker-section-subtitle,
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-section-subtitle + .immune-marker-panel {
+    break-after: avoid-page !important;
+    page-break-after: avoid !important;
+    break-before: avoid-page !important;
+    page-break-before: avoid !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-panel + .immune-marker-panel {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .immune-marker-panel-title,
+  .immune-marker-panel-subtitle,
+  .immune-marker-panel-note,
+  .immune-marker-card,
+  .immune-marker-gene,
+  .immune-marker-desc,
+  .immune-marker-chart-wrap,
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-meta {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+  /* Immune marker print layout: cards must stay whole with charts */
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-panel {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-panel-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    gap: 0.625rem !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-panel-grid--3 > .immune-marker-card {
+    flex: 0 0 calc((100% - 1.25rem) / 3) !important;
+    max-width: calc((100% - 1.25rem) / 3) !important;
+  }
+
+  .immune-marker-panel-grid--4 > .immune-marker-card,
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-panel-grid--5 > .immune-marker-card {
+    flex: 0 0 calc((100% - 1.875rem) / 4) !important;
+    max-width: calc((100% - 1.875rem) / 4) !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-card {
+    display: inline-flex !important;
+    flex-direction: column !important;
+    vertical-align: top !important;
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+    padding: 0.625rem 0.625rem 0.5rem 0.625rem !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-gene {
+    font-size: 0.875rem !important;
+    margin-bottom: 0.375rem !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-desc {
+    min-height: 0 !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 0.6875rem !important;
+    line-height: 1.35 !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-chart-wrap {
+    margin-bottom: 0.5rem !important;
+    overflow: visible !important;
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-chart {
+    display: block !important;
+    width: 100% !important;
+    max-height: 7.5rem !important;
+    object-fit: contain !important;
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-meta {
+    gap: 0.375rem !important;
+    margin-top: 0 !important;
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+  .immune-marker-meta-label,
+  .immune-marker-meta-value,
+  .immune-marker-panel-subtitle,
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-panel-note {
+    font-size: 0.6562rem !important;
+    line-height: 1.3 !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-badge {
+    min-width: 4.5rem !important;
+    font-size: 0.6875rem !important;
+    padding: 0.1875rem 0.5rem !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-panel-note {
+    margin-top: 0.625rem !important;
+    padding-top: 0.5rem !important;
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Never clip long text */
+  * {
+    text-overflow: clip !important;
+  }
+}
+
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+@media print {
+  /* Hide all helper tooltips in print */
+  .genetic-tooltip,
+  .immune-status-tooltip,
+  .immune-sign-tooltip,
+  .immune-marker-tooltip,
+  .immune-sign-card-info-row,
+  .immune-marker-card-info-row,
+  .immune-marker-panel-info-row,
+  .immune-sign-legend-panel-info,
+  .immune-status-card-info-row,
+/* Этот CSS-блок отвечает за оформление блока иммунного статуса.
+      Здесь задаётся внешний вид карточек, статусов и связанных подписей. */
+  .immune-status-metric-info {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Immune signatures */
+  .immune-sign-section,
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  .element-container:has(.immune-sign-section) {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .immune-sign-print-intro,
+  .immune-sign-print-row--first,
+  .immune-sign-print-row--second,
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  .immune-sign-print-row--third {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  .immune-sign-print-intro {
+    margin-bottom: 0.25rem !important;
+  }
+
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+  .immune-sign-print-row--second {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  /* Immune markers */
+  .immune-markers-section,
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .element-container:has(.immune-markers-section) {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .immune-marker-panel-grid-row,
+  .immune-marker-panel-footer,
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-panel-note {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+/* Этот CSS-блок отвечает за оформление строки иммунного маркера.
+      Через него настраивается внешний вид отдельного маркера и его шкалы. */
+  .immune-marker-panel-footer {
+    margin-top: 0.375rem !important;
+  }
+
+  /* Recommendations */
+  .recommendations-section,
+/* Этот CSS-блок отвечает за блок рекомендаций.
+      Здесь настраивается внешний вид карточек с выводами и рекомендациями по результатам анализа. */
+  .element-container:has(.recommendations-section) {
+    break-before: page !important;
+    page-break-before: always !important;
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Contacts */
+  .contacts-section,
+/* Этот CSS-блок отвечает за блок контактов и служебной информации.
+      Через него оформляются текстовые данные и подписи в нижней части интерфейса. */
+  .element-container:has(.contacts-section) {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .contacts-print-shell,
+  .contacts-card,
+  .contacts-grid,
+  .contacts-grid-col,
+/* Этот CSS-блок отвечает за блок контактов и служебной информации.
+      Через него оформляются текстовые данные и подписи в нижней части интерфейса. */
+  .contacts-kv {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+
+/* Этот CSS-блок отвечает за блок контактов и служебной информации.
+      Через него оформляются текстовые данные и подписи в нижней части интерфейса. */
+  .contacts-grid {
+    display: block !important;
+  }
+
+/* Этот CSS-блок отвечает за блок контактов и служебной информации.
+      Через него оформляются текстовые данные и подписи в нижней части интерфейса. */
+  .contacts-grid-col {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  /* Annotation blocks */
+  .annotation-blocks-section,
+/* Этот CSS-блок отвечает за блок аннотаций и поясняющих текстов.
+      Используется для стилизации карточек с текстовыми комментариями и заключениями. */
+  .element-container:has(.annotation-blocks-section) {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .annotation-blocks-wrap,
+/* Этот CSS-блок отвечает за блок аннотаций и поясняющих текстов.
+      Используется для стилизации карточек с текстовыми комментариями и заключениями. */
+  .element-container:has(.annotation-blocks-wrap) {
+    break-before: auto !important;
+    page-break-before: auto !important;
+  }
+
+/* Этот CSS-блок отвечает за блок аннотаций и поясняющих текстов.
+      Используется для стилизации карточек с текстовыми комментариями и заключениями. */
+  .annotation-blocks-print-shell {
+    break-inside: avoid-page !important;
+    page-break-inside: avoid !important;
+  }
+}
+
+/* Этот CSS-блок отвечает за печатную версию дашборда.
+      Здесь собраны стили, которые нужны для сохранения в PDF и корректного вывода на печать. */
+@media print {
+  /* Restore dashboard-like desktop grids in print; avoid responsive collapse */
+  .patient-block-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1rem !important;
+    align-items: stretch !important;
+  }
+
+/* Этот CSS-блок отвечает за блок с данными пациента.
+      Используется для карточек, подписей и значений в разделе пациента. */
+  .patient-block-card {
+    height: 100% !important;
+  }
+
+/* Этот CSS-блок отвечает за блок контактов и служебной информации.
+      Через него оформляются текстовые данные и подписи в нижней части интерфейса. */
+  .contacts-grid {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1.6fr 1.3fr 1fr !important;
+    gap: 1.25rem !important;
+    align-items: start !important;
+  }
+
+/* Этот CSS-блок отвечает за блок контактов и служебной информации.
+      Через него оформляются текстовые данные и подписи в нижней части интерфейса. */
+  .contacts-grid-col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    width: auto !important;
+    max-width: none !important;
+    margin-bottom: 0 !important;
+  }
+
+/* Этот CSS-блок отвечает за блок контактов и служебной информации.
+      Через него оформляются текстовые данные и подписи в нижней части интерфейса. */
+  .contacts-kv {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.125rem !important;
+    min-height: 2.5rem !important;
+  }
+}

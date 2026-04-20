@@ -1,0 +1,121 @@
+/* Этот CSS-блок отвечает за заголовок страницы или раздела.
+      Используется для названия отчёта, подзаголовков и связанных элементов. */
+.biomaterial-block-title-row {
+    display: flex;
+    align-items: center;
+    min-height: 2.5rem;
+}
+
+/* Этот CSS-блок отвечает за заголовок страницы или раздела.
+      Используется для названия отчёта, подзаголовков и связанных элементов. */
+.biomaterial-block-title-text {
+    font-size: 1rem !important;
+    line-height: 1.3 !important;
+    font-weight: 700 !important;
+    color: #111111 !important;
+    margin: 0 !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «.biomaterial-block-grid».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+.biomaterial-block-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+    margin-top: 0.5rem;
+    margin-bottom: 0.875rem;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «.biomaterial-block-card».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+.biomaterial-block-card {
+    background: var(--card-bg) !important;
+    border: 0.0625rem solid var(--card-border) !important;
+    border-radius: 0.875rem !important;
+    padding: 1.125rem 1.25rem !important;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «.biomaterial-block-row».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+.biomaterial-block-row {
+    display: grid !important;
+    grid-template-columns: minmax(10.625rem, 13.75rem) 1fr !important;
+    gap: 0.75rem !important;
+    align-items: start !important;
+    padding-top: 0.625rem !important;
+    padding-bottom: 0.625rem !important;
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «.biomaterial-block-row:last-child».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+.biomaterial-block-row:last-child {
+    border-bottom: none !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «.biomaterial-block-label».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+.biomaterial-block-label {
+    font-size: 0.9375rem !important;
+    line-height: 1.45 !important;
+    font-weight: 600 !important;
+    color: #333333 !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «.biomaterial-block-value».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+.biomaterial-block-value {
+    font-size: 0.9375rem !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+    color: #111111 !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+}
+
+/* Этот CSS-блок отвечает за адаптацию интерфейса под определённую ширину экрана или режим вывода.
+      Он нужен для того, чтобы макет корректно перестраивался в зависимости от условий отображения. */
+@media (max-width: 56.25rem) {
+    .biomaterial-block-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Unified section spacing for biomaterial block */
+/* Этот CSS-блок отвечает за элемент интерфейса «.biomaterial-block-grid».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+.biomaterial-block-grid {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.875rem !important;
+}
+
+/* Future-safe empty state spacing, if no-data card is shown */
+/* Этот CSS-блок отвечает за элемент интерфейса «.biomaterial-block-empty-card».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+.biomaterial-block-empty-card {
+    background: var(--card-bg) !important;
+    border: 0.0625rem solid var(--card-border) !important;
+    border-radius: 0.875rem !important;
+    padding: 0.875rem 1rem !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.875rem !important;
+}
+
+/* Этот CSS-блок отвечает за элемент интерфейса «.biomaterial-block-empty».
+      По этому селектору настраивается внешний вид соответствующей части дашборда.
+      Комментарий нужен для того, чтобы по коду было сразу понятно, к какому визуальному блоку относится стиль. */
+.biomaterial-block-empty {
+    font-size: 0.8125rem !important;
+    color: #666666 !important;
+}

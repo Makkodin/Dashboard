@@ -1,0 +1,85 @@
+/* Этот CSS-блок отвечает за блок с данными пациента.
+      Используется для карточек, подписей и значений в разделе пациента. */
+.patient-block-title-row {
+    display: flex;
+    align-items: center;
+    min-height: 2.5rem;
+}
+
+/* Этот CSS-блок отвечает за блок с данными пациента.
+      Используется для карточек, подписей и значений в разделе пациента. */
+.patient-block-title-text {
+    font-size: 1rem !important;
+    line-height: 1.3 !important;
+    font-weight: 700 !important;
+    color: #111111 !important;
+    margin: 0 !important;
+}
+
+/* Этот CSS-блок отвечает за блок с данными пациента.
+      Используется для карточек, подписей и значений в разделе пациента. */
+.patient-block-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+    margin-top: 0.5rem;
+    margin-bottom: 0.875rem;
+}
+
+/* Этот CSS-блок отвечает за блок с данными пациента.
+      Используется для карточек, подписей и значений в разделе пациента. */
+.patient-block-card {
+    background: var(--card-bg) !important;
+    border: 0.0625rem solid var(--card-border) !important;
+    border-radius: 0.875rem !important;
+    padding: 1.125rem 1.25rem !important;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* Этот CSS-блок отвечает за блок с данными пациента.
+      Используется для карточек, подписей и значений в разделе пациента. */
+.patient-block-row {
+    display: grid !important;
+    grid-template-columns: minmax(10rem, 13.75rem) 1fr !important;
+    gap: 0.75rem !important;
+    align-items: start !important;
+    padding-top: 0.625rem !important;
+    padding-bottom: 0.625rem !important;
+    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Этот CSS-блок отвечает за блок с данными пациента.
+      Используется для карточек, подписей и значений в разделе пациента. */
+.patient-block-row:last-child {
+    border-bottom: none !important;
+}
+
+/* Этот CSS-блок отвечает за блок с данными пациента.
+      Используется для карточек, подписей и значений в разделе пациента. */
+.patient-block-label {
+    font-size: 0.9375rem !important;
+    line-height: 1.45 !important;
+    font-weight: 600 !important;
+    color: #333333 !important;
+}
+
+/* Этот CSS-блок отвечает за блок с данными пациента.
+      Используется для карточек, подписей и значений в разделе пациента. */
+.patient-block-value {
+    font-size: 0.9375rem !important;
+    line-height: 1.5 !important;
+    font-weight: 400 !important;
+    color: #111111 !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+}
+
+/* Этот CSS-блок отвечает за блок с данными пациента.
+      Используется для карточек, подписей и значений в разделе пациента. */
+@media (max-width: 56.25rem) {
+    .patient-block-grid {
+        grid-template-columns: 1fr;
+    }
+}

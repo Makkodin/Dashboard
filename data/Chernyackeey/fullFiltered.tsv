@@ -1,0 +1,29 @@
+sample	chrom	pos	ref	alt	gene_symbol	ensembl_gene_id	ensembl_transcript_id	aa_change	cds_change	uniprot_id	rs_ids	other_variant_ids	consequence	filter	notes
+Chernyackeey_TUMOR	chr1	10320121	G	A	KIF1B	ENSG00000054523	ENST00000676179	p.E732K	c.2194G>A	O60333.231			missense_variant	PASS	c_inferred;p_inferred
+Chernyackeey_TUMOR	chr1	93877312	C	T	DNTTIP2	ENSG00000067334	ENST00000436063	p.R208M	c.623C>T	Q5QJE6.145			missense_variant	PASS	c_inferred;p_inferred
+Chernyackeey_TUMOR	chr1	94897924	G	A	CNN3	ENSG00000117519	ENST00000370206	p.P270T	c.808G>A	Q15417.203	rs937836322		missense_variant	PASS	c_inferred;p_inferred;has_rs
+Chernyackeey_TUMOR	chr2	1903254	C	T	MYT1L	ENSG00000186487	ENST00000647738	p.G620C	c.1858C>T	Q9UL68.162			missense_variant	PASS	c_inferred;p_inferred
+Chernyackeey_TUMOR	chr2	47463049	C	T	MSH2	ENSG00000095002	ENST00000233146	p.L469F	c.1405C>T	P43246.247	rs780702096	COSV51885640	missense_variant	PASS	c_inferred;p_inferred;has_rs;has_other_ids
+Chernyackeey_TUMOR	chr3	12836204	C	T	CAND2	ENSG00000144712	ENST00000456430			O75155.179	rs770370617		downstream_gene_variant	PASS	no_c;no_p;has_rs
+Chernyackeey_TUMOR	chr3	184327867	C	T	EIF4G1	ENSG00000114867	ENST00000346169	p.S1273F	c.3818C>T	Q04637.243	rs1725250078	COSV59994750	missense_variant	PASS	c_inferred;p_inferred;has_rs;has_other_ids
+Chernyackeey_TUMOR	chr4	122934567	A	G	AFG2A	ENSG00000145375	ENST00000274008	p.I326V	c.976A>G	Q8NB90.179			missense_variant	PASS	c_inferred;p_inferred
+Chernyackeey_TUMOR	chr4	150868269	G	A	LRBA	ENSG00000198589	ENST00000651943	p.S829Y	c.2486G>A	A0A494C1L5		COSV63950094	missense_variant	PASS	c_inferred;p_inferred;uniprot_from_map_enst;has_other_ids
+Chernyackeey_TUMOR	chr6	32157911	C	T		ENSG00000284954	ENST00000498575						upstream_gene_variant	PASS	no_c;no_p
+Chernyackeey_TUMOR	chr7	67067307	G	C	TYW1	ENSG00000198874	ENST00000359626	p.G393A	c.1178G>C	Q9NV66.160	rs1562994342	COSV62755472	missense_variant	PASS	c_inferred;p_inferred;has_rs;has_other_ids
+Chernyackeey_TUMOR	chr7	140753336	A	T	BRAF	ENSG00000157764	ENST00000646891	p.V600=	c.1799A>T	P15056.259	rs113488022	CM112509,COSV56056643,COSV56065204,COSV56080151	missense_variant	PASS	c_inferred;p_inferred;has_rs;has_other_ids
+Chernyackeey_TUMOR	chr9	14801811	G	A	FREM1	ENSG00000164946	ENST00000380880	p.P1179T	c.3535G>A	Q5H8C1.170	rs1381393162		missense_variant	PASS	c_inferred;p_inferred;has_rs
+Chernyackeey_TUMOR	chr9	21971097	C	T	CDKN2A-AS1	ENSG00000224854	ENST00000731046				rs121913384	CM034218,CM095540,COSV58683071,COSV58683670	downstream_gene_variant	PASS	no_c;no_p;has_rs;has_other_ids
+Chernyackeey_TUMOR	chr9	121107831	GA	G	CNTRL	ENSG00000119397	ENST00000373855			Q7Z7A1.168	rs750317819		frameshift_variant	PASS	no_c;no_p;has_rs
+Chernyackeey_TUMOR	chr10	68493558	A	G	SLC25A16	ENSG00000122912	ENST00000609923	p.V145G	c.434A>G	P16260.198			missense_variant	PASS	c_inferred;p_inferred
+Chernyackeey_TUMOR	chr10	72213276	A	G	ANAPC16	ENSG00000166295	ENST00000299381			Q96DE5.152			upstream_gene_variant	PASS	no_c;no_p
+Chernyackeey_TUMOR	chr11	78109479	G	A	ALG8	ENSG00000159063	ENST00000299626	p.P334H	c.1001G>A	Q9BVK2.189			missense_variant	PASS	c_inferred;p_inferred
+Chernyackeey_TUMOR	chr11	104037922	C	G		ENSG00000300441	ENST00000771685						intron_variant&non_coding_transcript_variant	PASS	no_c;no_p
+Chernyackeey_TUMOR	chr12	101312218	C	T	UTP20	ENSG00000120800	ENST00000261637	p.P832S	c.2494C>T	O75691.181		COSV99881760	missense_variant	PASS	c_inferred;p_inferred;has_other_ids
+Chernyackeey_TUMOR	chr13	40560044	C	A	FOXO1	ENSG00000150907	ENST00000379561	p.G483R	c.1447C>A	Q12778.231			missense_variant	PASS	c_inferred;p_inferred
+Chernyackeey_TUMOR	chr14	64282651	G	A	ESR2	ENSG00000140009	ENST00000341099	p.S112*	c.335G>A	Q92731.247	rs141516067	COSV50828538,COSV99962973	missense_variant	PASS	c_inferred;p_inferred;has_rs;has_other_ids
+Chernyackeey_TUMOR	chr16	24943776	G	A	ARHGAP17	ENSG00000140750	ENST00000289968	p.P443H	c.1328G>A	Q68EM7.165		COSV99253794	missense_variant	PASS	c_inferred;p_inferred;has_other_ids
+Chernyackeey_TUMOR	chr19	2102247	C	T	AP3D1	ENSG00000065000	ENST00000643116	p.D1192Y	c.3574C>T	O14617.214	rs757744074		missense_variant	PASS	c_inferred;p_inferred;has_rs
+Chernyackeey_TUMOR	chr19	22180852	C	T	ZNF676	ENSG00000196109	ENST00000397121	p.A289S	c.865C>T	Q8N7Q3.160			missense_variant	PASS	c_inferred;p_inferred
+Chernyackeey_TUMOR	chr19	37186831	G	A	ZNF585B	ENSG00000245680	ENST00000532828	p.H236N	c.706G>A	Q52M93.154		COSV57216112	missense_variant	PASS	c_inferred;p_inferred;has_other_ids
+Chernyackeey_TUMOR	chr19	44909207	C	T	APOE	ENSG00000130203	ENST00000252486	p.A304V	c.911C>T	P02649.270			missense_variant	PASS	c_inferred;p_inferred
+Chernyackeey_TUMOR	chrX	54333184	C	T	WNK3	ENSG00000196632	ENST00000354646	p.G164*	c.490C>T	Q9BYP7.192			missense_variant	PASS	c_inferred;p_inferred
